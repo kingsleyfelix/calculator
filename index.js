@@ -9,7 +9,7 @@ btnEl.forEach((btn)=>{
             }
         }
         if(btn.innerHTML === "="){
-            screenEl.innerHTML = eval(screenEl.innerHTML.replace("×","*").replace("÷","/"))
+            screenEl.innerHTML = eval(screenEl.innerHTML.replace(/×/g,"*").replace(/÷/g,"/"))
         }else if(btn.innerHTML === "DEL"){
             screenEl.innerHTML = ""
         }else{
